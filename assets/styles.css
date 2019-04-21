@@ -4,14 +4,14 @@ body {
 
 h1, h2, h3, h4,
 strong {
-  font-family: 'Kaushan Script', cursive;
+    font-family: 'Kaushan Script', cursive;
 }
 
 .navbar-brand{
     padding: 5px 15px;
 }
 .navbar-brand img{
-  height: 40px;
+    height: 40px;
 }
 
 .navbar-brand h1 {
@@ -20,11 +20,11 @@ strong {
 }
 
 .navbar-right{
-  padding-right: 1%;
+    padding-right: 1%;
 }
 .navbar-default .navbar-nav>li>a {
-  margin-top: 8px;
-  margin-bottom: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .cookies {
@@ -32,7 +32,7 @@ strong {
 }
 
 section.cookies{
-  min-height: 90vH;
+    min-height: 90vH;
 }
 /* Source : https://bootsnipp.com/snippets/featured/sign-in-panel */
 .panel-heading {
@@ -40,32 +40,65 @@ section.cookies{
 }
 
 .panel-footer {
-	padding: 1px 15px;
-	color: #A0A0A0;
+    padding: 1px 15px;
+    color: #A0A0A0;
 }
 
 .profile-img {
-	width: 96px;
-	height: 96px;
-	margin: 0 auto 10px;
-	display: block;
-	-moz-border-radius: 50%;
-	-webkit-border-radius: 50%;
-	border-radius: 50%;
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
 }
 
 @media screen and ( min-width:768px ){
 
-  body {
-      padding-top:120px;
-  }
+    body {
+        padding-top:120px;
+    }
 
-  .navbar-brand h1 {
-      font-size: 2.3rem;
-      margin: 4% auto;
-  }
+    .navbar-brand h1 {
+        font-size: 2.3rem;
+        margin: 4% auto;
+    }
 
-  .navbar-brand img {
-    height: 60px;
-  }
+    .navbar-brand img {
+        height: 60px;
+    }
 }
+
+.removeButton:active
+{
+    background-color: red;
+}
+
+.removeButton
+{
+    background-color: red;
+    border: red;
+}
+
+.removeButton:hover {
+    background-color: #d82727;
+}
+
+.total
+{
+    color: #d82727;
+}
+
+.titleCart
+{
+    font-size: 1.1em;
+    color: saddlebrown;
+}
+
+.table
+{
+    width: 60%;
+    border: solid 1px grey;
+}
+
