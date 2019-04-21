@@ -2,15 +2,13 @@
 
 session_start();
 
-if (empty($_SESSION)){
-    header('Location: login.php');
-}else {// ici , $_GET['remove_to_cart'] et $_GET['add_to_cart'] on la même valeur car ?add_to_cart=Pecan nuts et ?remove_to_cart=Pecan nuts
-    if (isset($_GET['add_to_cart'])) {
-        $_SESSION['panier'][$_GET['add_to_cart']]['quantité'] += 1;
-    }elseif (isset($_GET['remove_to_cart']) && ($_SESSION['panier'][$_GET['remove_to_cart']]['quantité'] > 0) ){
-        $_SESSION['panier'][$_GET['remove_to_cart']]['quantité'] -= 1;
-    }
+// ici , $_GET['remove_to_cart'] et $_GET['add_to_cart'] on la même valeur car ?add_to_cart=Pecan nuts et ?remove_to_cart=Pecan nuts
+if (isset($_GET['add_to_cart'])) {
+    $_SESSION['panier'][$_GET['add_to_cart']]['quantité'] += 1;
+}elseif (isset($_GET['remove_to_cart']) && ($_SESSION['panier'][$_GET['remove_to_cart']]['quantité'] > 0) ){
+    $_SESSION['panier'][$_GET['remove_to_cart']]['quantité'] -= 1;
 }
+
 ?>
 
 <section class="cookies container-fluid">

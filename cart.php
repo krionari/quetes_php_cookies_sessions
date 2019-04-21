@@ -1,4 +1,8 @@
-<?php require 'inc/head.php'; ?>
+<?php require 'inc/head.php';
+
+if (empty($_SESSION)){
+header('Location: login.php');
+}?>
 
 
             <table class="table table-striped table-dark">
