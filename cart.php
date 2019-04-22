@@ -2,7 +2,7 @@
 session_start();
 require 'inc/head.php';
 
-if (empty($_SESSION)){
+if (empty($_SESSION['panier']) && !isset($_SESSION['panier'])){
 header('Location: login.php');
 }?>
 
