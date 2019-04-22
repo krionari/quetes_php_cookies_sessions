@@ -1,8 +1,14 @@
-<?php require 'inc/head.php';
+<?php
+session_start();
+require 'inc/head.php';
 
 // ici , $_GET['remove_to_cart'] et $_GET['add_to_cart'] on la même valeur car ?add_to_cart=Pecan nuts et ?remove_to_cart=Pecan nuts
 if (isset($_GET['add_to_cart'])) {
-    $_SESSION['panier'][$_GET['add_to_cart']]['quantité'] += 1;
+    if (!isset($_SESSION['panier'][$_GET['add_to_cart']])){
+        $_SESSION['panier'][$_GET['add_to_cart']] = ['quantité' => 1];
+    }else{
+        $_SESSION['panier'][$_GET['add_to_cart']]['quantité'] += 1;
+    }
 }elseif (isset($_GET['remove_to_cart']) && ($_SESSION['panier'][$_GET['remove_to_cart']]['quantité'] > 0) ){
     $_SESSION['panier'][$_GET['remove_to_cart']]['quantité'] -= 1;
 }
@@ -74,10 +80,12 @@ if (isset($_GET['add_to_cart'])) {
     </div>
 
     <?php
-    foreach ($_SESSION['panier'] as $cookie => $quantite)
-    {if ($_SESSION['panier'][$cookie]['quantité'] > 0){
-        echo $cookie . ' : ' . $_SESSION['panier'][$cookie]['quantité'] . '</br>';
-    }} ?>
+
+    if (isset($_GET['add_to_cart']) || isset($_GET['remove_to_cart'])  ){
+        foreach ($_SESSION['panier'] as $cookie => $quantite)
+        {if ($_SESSION['panier'][$cookie]['quantité'] > 0){
+            echo $cookie . ' : ' . $_SESSION['panier'][$cookie]['quantité'] . '</br>';
+        }}} ?>
 
 </section>
 

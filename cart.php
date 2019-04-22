@@ -1,4 +1,6 @@
-<?php require 'inc/head.php';
+<?php
+session_start();
+require 'inc/head.php';
 
 if (empty($_SESSION)){
 header('Location: login.php');

@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 if (!empty($_POST)){
     require 'checkForm.php';
