@@ -17,6 +17,7 @@ header('Location: login.php');
                 <tbody>
                 <?php
                 $total = 0;
+                if (isset($_SESSION['panier'])){
                 foreach ($_SESSION['panier'] as $cookie => $quantite)
                 { if ($_SESSION['panier'][$cookie]['quantité'] > 0){?>
                     <tr>
@@ -24,7 +25,7 @@ header('Location: login.php');
                         <td><?php echo $_SESSION['panier'][$cookie]['quantité']; ?></td>
                         <?php $total += $_SESSION['panier'][$cookie]['quantité']; ?>
                     </tr>
-                <?php }} ?>
+                <?php }}} ?>
                 <tr>
                     <th scope="row" class="total">Total</th>
                     <td class="total"><?php echo $total; ?></td>
@@ -32,6 +33,7 @@ header('Location: login.php');
 
                 </tbody>
             </table>
+
 
 
 <?php require 'inc/foot.php'; ?>
