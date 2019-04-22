@@ -1,7 +1,5 @@
 <?php require 'inc/head.php';
 
-session_start();
-
 // ici , $_GET['remove_to_cart'] et $_GET['add_to_cart'] on la même valeur car ?add_to_cart=Pecan nuts et ?remove_to_cart=Pecan nuts
 if (isset($_GET['add_to_cart'])) {
     $_SESSION['panier'][$_GET['add_to_cart']]['quantité'] += 1;

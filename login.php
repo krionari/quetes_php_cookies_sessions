@@ -1,7 +1,4 @@
 <?php
-session_start();
-
-require 'inc/head.php';
 
 if (!empty($_POST)){
     require 'checkForm.php';
@@ -9,6 +6,8 @@ if (!empty($_POST)){
 if(isset($_SESSION['loginName'])){
     header('Location: /');
 }
+
+require 'inc/head.php';
 
 ?>
 <div class="container" style="margin-top:40px">
@@ -36,7 +35,9 @@ if(isset($_SESSION['loginName'])){
                     </span>
                     <input class="form-control" placeholder="Username" name="loginName" type="text" autofocus>
                   </div>
-                    <?php echo $message['loginName'] ?>
+                   <?php
+                   if (isset($message['loginName'])){
+                     echo $message['loginName']; } ?>
                 </div>
                 <div class="form-group">
                   <input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign in">

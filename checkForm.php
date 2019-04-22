@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 $message = [];
 
 if (empty($_POST['loginName'])) {

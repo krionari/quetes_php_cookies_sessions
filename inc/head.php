@@ -54,6 +54,9 @@ session_start()
     </div><!-- /.container-fluid -->
   </nav>
   <div class="container-fluid text-right">
-    <strong>Hello <?php echo $_SESSION['loginName']; ?> !</strong>
+     <?php if (isset($_SESSION['loginName'])){ ?>
+      <strong>Hello <?php echo $_SESSION['loginName']; ?> !</strong>
+      <?php } ?>
+
   </div>
 </header>
