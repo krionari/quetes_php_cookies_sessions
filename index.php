@@ -23,12 +23,14 @@ if (isset($_GET['add_to_cart'])) {
                 <figcaption class="caption">
                     <h3>Pecan nuts</h3>
                     <p>Cooked by Penny !</p>
-                    <a  href="?add_to_cart=Pecan nuts" class="btn btn-primary">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
-                    </a>
-                    <a  href="?remove_to_cart=Pecan nuts" class="btn btn-primary removeButton">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Remove to cart
-                    </a>
+                    <?php  if (isset($_SESSION['loginName'])){ ?>
+                        <a  href="?add_to_cart=Pecan nuts" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
+                        </a>
+                        <a  href="?remove_to_cart=Pecan nuts" class="btn btn-primary removeButton">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Remove to cart
+                        </a>
+                    <?php  } ?>
                 </figcaption>
             </figure>
         </div>
@@ -38,12 +40,14 @@ if (isset($_GET['add_to_cart'])) {
                 <figcaption class="caption">
                     <h3>Chocolate chips</h3>
                     <p>Cooked by Bernadette !</p>
-                    <a href="?add_to_cart=Chocolate chips" class="btn btn-primary">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
-                    </a>
-                    <a href="?remove_to_cart=Chocolate chips" class="btn btn-primary removeButton">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Remove to cart
-                    </a>
+                    <?php  if (isset($_SESSION['loginName'])){ ?>
+                        <a href="?add_to_cart=Chocolate chips" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
+                        </a>
+                        <a href="?remove_to_cart=Chocolate chips" class="btn btn-primary removeButton">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Remove to cart
+                        </a>
+                    <?php  } ?>
                 </figcaption>
             </figure>
         </div>
@@ -53,12 +57,14 @@ if (isset($_GET['add_to_cart'])) {
                 <figcaption class="caption">
                     <h3>Chocolate cookie</h3>
                     <p>Cooked by Bernadette !</p>
-                    <a  href="?add_to_cart=Chocolate cookie" class="btn btn-primary">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
-                    </a>
-                    <a  href="?remove_to_cart=Chocolate cookie" class="btn btn-primary removeButton">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Remove to cart
-                    </a>
+                    <?php  if (isset($_SESSION['loginName'])){ ?>
+                        <a  href="?add_to_cart=Chocolate cookie" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
+                        </a>
+                        <a  href="?remove_to_cart=Chocolate cookie" class="btn btn-primary removeButton">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Remove to cart
+                        </a>
+                    <?php  } ?>
                 </figcaption>
             </figure>
         </div>
@@ -68,12 +74,14 @@ if (isset($_GET['add_to_cart'])) {
                 <figcaption class="caption">
                     <h3>M&M's&copy; cookies</h3>
                     <p>Cooked by Penny !</p>
-                    <a  href="?add_to_cart=MMS cookies" class="btn btn-primary">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
-                    </a>
-                    <a  href="?remove_to_cart=MMS cookies" class="btn btn-primary removeButton">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Remove to cart
-                    </a>
+                    <?php  if (isset($_SESSION['loginName'])){ ?>
+                        <a  href="?add_to_cart=MMS cookies" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
+                        </a>
+                        <a  href="?remove_to_cart=MMS cookies" class="btn btn-primary removeButton">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Remove to cart
+                        </a>
+                    <?php  } ?>
                 </figcaption>
             </figure>
         </div>
